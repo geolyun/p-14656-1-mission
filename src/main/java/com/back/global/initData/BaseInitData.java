@@ -20,6 +20,7 @@ public class BaseInitData {
         return args->{
             work1();
             work2();
+            work3();
         };
     }
 
@@ -41,6 +42,13 @@ public class BaseInitData {
         log.info("기존에 있던 Post 전체 조회");
         for (Post post : postService.findAll()) {
             log.debug("존재하는 Post: {}", post);
+        }
+    }
+
+    private void work3(){
+        log.info("기존에 있던 Post 단건 조회");
+        for (Post post : postService.findAll()) {
+            log.debug("조회된 Post: {}", post);
         }
     }
 }
